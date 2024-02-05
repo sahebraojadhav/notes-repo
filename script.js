@@ -11,13 +11,6 @@ hexColorContainer.appendChild(button)
 
 //how to add css using js dynamic values
 
-var cssStyles= "display: flex;"+
-                "align-items: center;"+
-                "justify-content: center;"+
-                "flex-direction:column;"+
-                "gap:100px;"+
-                " background-color:#" + prevColor + ";"+
-                "margin-bottom:10px;"
 
 hexCodeGenerator.addEventListener('click',()=>{
     hexColor=""
@@ -26,8 +19,17 @@ hexCodeGenerator.addEventListener('click',()=>{
     }
     console.log(hexColor)
     hexCodeGenerator.style.backgroundColor=`#${hexColor}`;
-    hexColorContainer.style.cssText=cssStyles;
+    
     prevColor=hexColor;
+    
+    hexColorContainer.style.cssText="display: flex;"+
+    "align-items: center;"+
+    "justify-content: center;"+
+    "flex-direction:column;"+
+    "gap:100px;"+
+    " background-color:#" + prevColor + ";"+
+    "margin-bottom:10px;";
+  
     
 })
 
